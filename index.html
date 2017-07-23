@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Image Search Abstraction Layer</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+          crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluide"
+         style="margin: 5%">
+      <h2>Image Search Abstraction Layer</h2>
+      <p>dmiten | <a href="https://github.com/dmiten/FCC-backend-ImageSearchAbstractionLayer"
+                     target="blank">GitHub</a></p>
+      <blockquote>
+        <b><i>User Stories:</i></b>
+        <li>
+          I can get the image URLs, alt text and page urls for a set of images relating to a given search string.
+        </li>
+        <li>
+          I can paginate through the responses by adding a <code>page=2&limit=10</code> parameters to the URL.
+        </li>
+        <li>
+          I can get a list of the most recently submitted search strings.
+        </li>
+      </blockquote>
+      <b><i>Using API:</i></b><br>
+      <li>
+        <code>../api/search</code> is wrapper for Flickr API. It accept a string as parameter:
+        <code>..api/search/{string}</code>. Spaces must be replaced with <code>%20</code>. Flickr API will use this string for
+        a free text search. Photos who's title, description or tags contain the text will be returned.
+        You can exclude results that match a term by prepending it with a - character. Native Flickr pagination used.
+        API accept start page number and limit per page as <code>page=40&limit=500</code>.
+        Default values are <code>page=1&limit=10</code>.<br>
+        For example: <code>../api/search/cat%20sleep?page=40&limit=500</code> will return photos with
+        "cat" and "sleep" in the tags or descriptions from page number 40 and 500 objects per page.
+      </li>
+      <li>
+        <code>../api/history</code> doesn't need any parameters.
+        It return 10 of the most recently submitted search strings.
+      </li>
+    </div>
+  </body>
+</html>

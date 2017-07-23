@@ -1,0 +1,24 @@
+{
+  "name": "fcc-backend-image-search-abstraction-layer",
+  "version": "1.0.0",
+  "description": "Test task for FCC",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Dmitry Tenitskiy",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dmiten/FCC-backend-ImageSearchAbstractionLayer.git"
+  },
+  "dependencies": {
+    "babel-core": "^6.25.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "flickrapi": "^0.6.0",
+    "mongoose": "^4.11.3"
+  }
+}
