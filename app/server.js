@@ -4,7 +4,6 @@ import express from "express";
 import dotenv from "dotenv";
 import path from "path";
 
-import handleDb from "./handledb.js";
 import logic from "./logic.js";
 
 export default function server() {
