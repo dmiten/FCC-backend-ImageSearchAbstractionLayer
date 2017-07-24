@@ -45,8 +45,3 @@ handleDb.start = () => {
     });
   });
 };
-
-handleDb.searchHistory = (query, timestamp) => {
-  let queryHistory = new handleDb.SearchHistory({ query, timestamp });
-  queryHistory.save();
-};
